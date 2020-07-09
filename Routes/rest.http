@@ -1,0 +1,3 @@
+GET http://localhost:5000/trucks
+
+GET http://localhost:5000/rubbish

@@ -1,0 +1,29 @@
+{
+  "name": "logistica",
+  "version": "1.0.0",
+  "description": "Management Dashboard for Trucking/Logistics Companies. Allows logging truck trips , oil change notifications , cleaning , engine replacement/repair , mileage ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ARitik/Logistica.git"
+  },
+  "author": "Ambadi Ritik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ARitik/Logistica/issues"
+  },
+  "homepage": "https://github.com/ARitik/Logistica#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "mongoose": "^5.9.22"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  }
+}
