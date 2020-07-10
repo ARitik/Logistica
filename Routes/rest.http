@@ -1,3 +1,19 @@
+
 GET http://localhost:5000/trucks
 
 GET http://localhost:5000/rubbish
+
+POST http://localhost:5000/trucks
+Content-type: application/json
+
+{
+	"brand": "Scania",
+	"model": "R Series",
+	"variant": "SleeperCab",
+	"engine": "V8 620hp",
+	"oilCheck": false,
+	"mileage": 64620 ,
+	"checkEngine": false,
+	"tireReplacement": true,
+	"electricalIssues": false
+}
