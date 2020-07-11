@@ -1,7 +1,7 @@
 
 GET http://localhost:5000/trucks
 
-GET http://localhost:5000/rubbish
+GET http://localhost:5000/trucks/5f08b6a4180da22056547720
 
 POST http://localhost:5000/trucks
 Content-type: application/json

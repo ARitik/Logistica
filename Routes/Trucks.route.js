@@ -7,10 +7,22 @@ router.get('/',async (req,res,next) => {
 	try {
 		const result = await Truck.find({},{__v:0});
 		res.send(result);
-	}catch(error) {
+	}
+	catch(error) {
 		console.error(error.message);
 	}
 });
+
+router.get('/:id',async(req,res,next)=> {
+	try {
+		const id = req.params.id;
+		const result = await Truck.find({_id: id},{__v:0});
+		res.send(result);
+	}
+	catch(error) {
+		console.error(error.message);
+	}
+})
 
 router.post('/',async (req,res,next) => {
 	try {
@@ -22,6 +34,7 @@ router.post('/',async (req,res,next) => {
 		console.error(error.message);
 	}
 })
+
 
 
 module.exports = router;
