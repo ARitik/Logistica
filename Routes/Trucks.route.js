@@ -13,10 +13,10 @@ router.get('/',async (req,res,next) => {
 	}
 });
 
-router.get('/:id',async(req,res,next)=> {
+router.get('/:id',async (req,res,next)=> {
 	try {
 		const id = req.params.id;
-		const result = await Truck.find({_id: id},{__v:0});
+		const result = await Truck.findById(id);
 		res.send(result);
 	}
 	catch(error) {
@@ -31,6 +31,16 @@ router.post('/',async (req,res,next) => {
 		res.send(result);
 	}
 	catch(error) {
+		console.error(error.message);
+	}
+})
+
+router.delete('/:id', async (req,res,next) => {
+	try {
+		const id = req.params.id;
+		const result = await Truck.findByIdAndDelete(id);
+		res.send(result);
+	}catch(error) {
 		console.error(error.message);
 	}
 })
