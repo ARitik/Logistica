@@ -31,6 +31,7 @@ connect(uri, {
 	pass:process.env.DB_PASS,
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
+	useFindAndModify: false,
 	})
 .then(() => {
 	console.log('Connection estabislished with MongoDB');	

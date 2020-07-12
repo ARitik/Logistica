@@ -45,6 +45,17 @@ router.delete('/:id', async (req,res,next) => {
 	}
 })
 
+router.patch('/:id', async(req,res,next) => {
+	try {
+		const id = req.params.id; 
+		const updates = req.body;
+		const options = { new:true };
+		const result = await Truck.findByIdAndUpdate(id,updates,options);
+		res.send(result);
+	}catch(error) {
+		console.error(error.message);
+	}
+})
 
 
 module.exports = router;
