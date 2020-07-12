@@ -1,6 +1,7 @@
 const express = require('express');
 const { connect } = require('mongoose');
 const { config } = require('dotenv');
+const createError = require('http-errors');
 
 const app = express();
 
@@ -56,9 +57,10 @@ app.use('/trucks',TruckRoute);
 //ERROR HANDLER 
 
 app.use((req,res,next) => {
-	const error = new Error('Page not found!')
-	error.status = 404;
-	next(error);
+	// const error = new Error('Page not found!')
+	// error.status = 404;
+	// next(error);
+	next(createError(404,'Page not Found!'));
 })
 
 app.use((err,req,res,next) => {
