@@ -12,4 +12,4 @@ router.delete('/:id', TruckController.deleteTruck);
 router.patch('/:id', TruckController.updateTruck);
 
 
-module.exports = router;
+module.exports = router; 
