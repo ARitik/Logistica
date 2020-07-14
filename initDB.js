@@ -5,7 +5,7 @@ const { config } = require('dotenv');
 module.exports = () => {
 	//MongoDB Connection String : NodeJS 2.2+
 config(); //dotenv config
-const uri = `mongodb://cluster0-shard-00-00.16u1k.mongodb.net:27017,cluster0-shard-00-01.16u1k.mongodb.net:27017,cluster0-shard-00-02.16u1k.mongodb.net:27017/<dbname>?ssl=true&replicaSet=atlas-xlci0y-shard-0&authSource=admin&retryWrites=true&w=majority`
+const uri = process.env.DB_URI;
 
 //MongoDB : Connection 
 
